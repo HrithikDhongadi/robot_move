@@ -1,0 +1,9 @@
+<launch>
+
+	<!--Load and launch the joint trajectory controller-->
+	<rosparam file ="$(find robot_move)/config/joint_trajectory_action_params.yaml" command="load"/>
+	<node name= "joint_trajectory_action" pkg= "joint_trajectory_action" type="joint_trajectory_action" output="screen"/>
+    
+	<node name= "robot_move" pkg= "robot_move" type="robot_move_node" output="screen"/>
+
+</launch>
