@@ -12,11 +12,11 @@ def publish_joint_trajectory():
     joint_trajectory.joint_names = ['joint_1', 'joint_2', 'joint_3', 'joint_4', 'joint_5']
 
     point = JointTrajectoryPoint()
-    point.positions = [0.0, 0.0, 0.0, 0.0, 0.0]
+    point.positions = [1, 0.0, 0.0, 0.0, 0.0]
     point.velocities = [0.2, 1, 0.0, 0.0, 0.0]
     point.accelerations = [0.0, 0.0, 0.0, 0.0, 0.0]
     point.effort = [0.0, 0.0, 0.0, 0.0, 0.0]
-    point.time_from_start = rospy.Duration(1)
+    point.time_from_start = rospy.Duration(0.1)
 
     joint_trajectory.points.append(point)
 
